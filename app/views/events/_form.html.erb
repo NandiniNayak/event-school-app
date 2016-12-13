@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= simple_form_for(@event) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    
+    <%= f.input :name, label:"Enter the event name" %>
+    <%= f.input :description, placeholder:'Please provide details of the event' %>
+    <%= f.input :date, order: [:day, :month, :year], start_year: Date.today.year, end_year: Date.today.year + 1 %>
+    <%= f.input :start_time %>
+    <%= f.input :end_time %>
+    <%= f.input :image %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Year Groups</h1>
+
+
+
+  
+    <% @year_groups.each do |year_group| %>
+<div class ="col-md-4">
+        <%=link_to year_group.name,subjects_path(year: year_group.id),class:"year_group"%></td>
+        </div>
+        <!--<td><%= link_to 'Show', year_group %></td>-->
+        <!--<td><%= link_to 'Edit', edit_year_group_path(year_group) %></td>-->
+        <!--<td><%= link_to 'Destroy', year_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+
+    <% end %>
+
+<!--<br>-->
+<!--
+<%= link_to 'New Year group', new_year_group_path %>
+-->

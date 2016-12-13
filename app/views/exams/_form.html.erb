@@ -1,0 +1,20 @@
+
+        
+<%= simple_form_for(@exam) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :sub_name %>
+    <%= f.input :grade, placeholder: "class" %>
+    <%= f.input :start_date %>
+    <%= f.input :start_time,placeholder: "enter the exam period" %>
+    <%= f.input :image, as: :file%>
+    <%= f.input :description %>
+    <%= f.association :year_group %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

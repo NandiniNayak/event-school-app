@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sub name:</strong>
+  <%= @exam.sub_name %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @exam.grade %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @exam.start_date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @exam.start_time %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @exam.image %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @exam.description %>
+</p>
+
+<p>
+  <strong>Year group:</strong>
+  <%= @exam.year_group.name %>
+</p>
+
+<%= link_to 'Edit', edit_exam_path(@exam) %> |
+<%= link_to 'Back', exams_path %>

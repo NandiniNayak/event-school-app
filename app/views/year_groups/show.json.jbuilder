@@ -1,0 +1,1 @@
+json.partial! "year_groups/year_group", year_group: @year_group

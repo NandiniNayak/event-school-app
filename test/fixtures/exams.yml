@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sub_name: MyString
+  grade: MyString
+  start_date: MyString
+  start_time: MyString
+  image: MyString
+  description: MyText
+  year_group_id: 
+
+two:
+  sub_name: MyString
+  grade: MyString
+  start_date: MyString
+  start_time: MyString
+  image: MyString
+  description: MyText
+  year_group_id: 

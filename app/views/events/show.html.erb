@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title"><%= @event.name %></h2>
+      </div>
+      <div class="panel body">
+        <%= image_tag @event.image, class:"img-responsive img-thubnail" %>
+        <p><%= @event.description %></p>
+        <hr>
+        <p><strong>When: </strong><%= @event.date.strftime('%A, %d %B %Y') %> <%= @event.start_time.strftime('l:%M%P') %> - <%= @event.end_time.strftime('%l:%M%P') %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<p>
+  <strong>User's email:</strong>
+  <%= @event.user.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @event.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @event.end_time %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @event.status %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @event.image %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

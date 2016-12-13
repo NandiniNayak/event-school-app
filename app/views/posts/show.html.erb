@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong class = "post-style">Title:</strong> 
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong class = "post-style">Description:</strong>
+  <%= @post.description %>
+</p>
+
+<p>
+  <strong class = "post-style">Image:</strong>
+  <%= @post.image %>
+</p>
+
+<p>
+  <strong class = "post-style">Category:</strong>
+  <%= @post.category %>
+</p>
+
+<p>
+  <strong >Year group:</strong>
+  <%= @post.year_group.name %>
+</p>
+<p>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+
+<%= form_for [@post,Comment.new] do |f| %></p>
+  <p><%= f.label @post,"New Comment"%></p>
+  <p><%= f.text_area :body %></p>
+  <p><%= f.submit "Add comment" %></p> 
+<% end %>
+<h1> Comments </h1>
+<%= render partial: @post.comments %>
